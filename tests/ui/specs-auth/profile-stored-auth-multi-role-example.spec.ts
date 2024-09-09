@@ -10,6 +10,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('Book Store Application - Profile - Admin', () => {
     test('admin and user', async ({ browser }) => {
+        // we can run 2 tests simultaneously with 2 different users
         const adminContext = await browser.newContext({ storageState: '.auth/admin.json' });
         const adminPage = await adminContext.newPage();
         profilePage = new ProfilePage(adminPage);

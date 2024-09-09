@@ -11,9 +11,18 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Book Store Application - Profile - Admin', () => {
-    // test.use({ storageState: '.auth/admin.json' });
+    test.use({ storageState: '.auth/admin.json' });
     test('Sort books - admin', async ( { page } ) => { 
         profilePage = new ProfilePage(page);
         await profilePage.checkLoggedInAdmin();
     });
 });
+
+//別のJSONでのテストも追加できる
+// test.describe('Book Store Application - Profile - Admin', () => {
+//     // test.use({ storageState: '.auth/user.json' });
+//     test('Sort books - admin', async ( { page } ) => { 
+//         profilePage = new ProfilePage(page);
+//         await profilePage.checkLoggedInAdmin();
+//     });
+// });
