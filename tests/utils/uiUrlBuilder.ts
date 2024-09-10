@@ -17,5 +17,5 @@ export function buildUrl(page: string, params?: Record<any, any>) {
     * url  /books?book=9781449337711
   */
 
-  return url;
+  return url; //　hooks.tsにurlをリターン
 }

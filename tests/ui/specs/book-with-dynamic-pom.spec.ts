@@ -6,7 +6,7 @@ import pages from '../../utils/pages';
 let bookPage: BookPage;
 
 test.beforeEach(async ({ page }) => {
-    bookPage = await hooks.beforeEach(page, BookPage, pages.bookStorePage);
+    bookPage = await hooks.beforeEach(page, BookPage, pages.bookStorePage); // hooks.tsより
 });
   
 test.describe('Books - Dynamic Page Object Model', () => {

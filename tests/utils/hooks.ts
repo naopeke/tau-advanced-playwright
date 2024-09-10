@@ -12,7 +12,7 @@ async function beforeEach(
 ) {
   await page.goto(buildUrl(targetPage, params));
   const pageObject = await new PageObjectParam(page);
-  return pageObject;
+  return pageObject; // pageObjectをリターンする =>テストファイル profile-with-dynamic-pom.spec.ts
 }
 
 export default { beforeEach };
